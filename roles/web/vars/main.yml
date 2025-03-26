@@ -1,0 +1,8 @@
+dist_name: "{{ 'amazon' if ansible_distribution == 'Amazon'
+              else 'ubuntu' if ansible_distribution == 'Ubuntu'
+              else 'others'
+            }}"
+
+nu: "{{ groups.koreaeast | count }}"
+
+idx: "{{ groups.koreaeast.index(inventory_hostname)+1 | int }}"

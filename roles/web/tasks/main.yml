@@ -1,0 +1,5 @@
+- name: install web server
+  include_tasks: "{{ dist_name }}.yml"
+
+- name: create index file
+  include_tasks: config.yml

@@ -1,0 +1,6 @@
+- name: install webserver
+  hosts: koreaeast
+  become: true # 각 서버의 루트의 권한
+  
+  roles:
+    - role: ./roles/web
